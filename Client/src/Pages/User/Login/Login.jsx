@@ -16,22 +16,22 @@ const Login = () => {
                         <h2>Sign Up</h2>
                     }
                     <div className="form"> 
+                        {signState === 'Sign Up' ? 
+                            <div className="inputBox"> 
+                                <input type="password" required/> <i>Username</i> 
+                            </div> 
+                        : <></>}
+
                         <div className="inputBox"> 
-                            <input type="text" required/> <i>Username</i> 
+                            <input type="text" required/> <i>Email</i> 
                         </div> 
 
                         <div className="inputBox"> 
                             <input type="password" required/> <i>Password</i> 
                         </div> 
 
-                        {signState === 'Sign Up' ? 
-                            <div className="inputBox"> 
-                                <input type="password" required/> <i>Confirm Password</i> 
-                            </div> 
-                        : <></>}
-
                         {signState === 'Sign In' ? 
-                            <div className="links"> <a href="#">Forgot Password</a> <a onClick={() => setSignState('Sign Up')} style={{cursor:'pointer'}}>Signup</a> </div> 
+                            <div className="links"> <a href="#">Don't have an account ?</a> <a onClick={() => setSignState('Sign Up')} style={{cursor:'pointer'}}>Signup</a> </div> 
                         : <></>}
 
                         <div className="inputBox"> 
